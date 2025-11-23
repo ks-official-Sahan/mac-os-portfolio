@@ -2,6 +2,7 @@ import { navContent, navIcons, navLinks } from "@/constants";
 import dayjs from "dayjs";
 import Image from "next/image";
 import Time from "./Time";
+import { Suspense } from "react";
 
 /* eslint-disable jsx-a11y/alt-text */
 
@@ -30,7 +31,9 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <Time />
+        <Suspense fallback={<time>Loading...</time>}>
+          <Time />
+        </Suspense>
       </div>
     </nav>
   );
