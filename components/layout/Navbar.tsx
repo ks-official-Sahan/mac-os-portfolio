@@ -1,6 +1,9 @@
 import { navContent, navIcons, navLinks } from "@/constants";
 import dayjs from "dayjs";
 import Image from "next/image";
+import Time from "./Time";
+
+/* eslint-disable jsx-a11y/alt-text */
 
 const Navbar = () => {
   return (
@@ -27,7 +30,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <time>{dayjs().format("ddd MMM D h:mm A")}</time>
+        <Time />
       </div>
     </nav>
   );
